@@ -1,0 +1,186 @@
+<section class="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- ENCABEZADO DE SECCIÓN -->
+    <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+        <span class="bg-indigo-50 text-indigo-600 border border-indigo-100 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider inline-block mb-3">
+            Oportunidades de Crecimiento
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">Experiencias y Planes</h2>
+        <p class="mt-4 text-base sm:text-lg text-slate-600">
+            Selecciona el evento o plan de tu interés para unirte a nuestras actividades comunitarias y talleres especiales.
+        </p>
+    </div>
+
+    <!-- CONTENEDOR GRID DE TARJETAS (DINÁMICO) -->
+    <div id="grid-experiencias" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- TARJETA 1: DE PAGO (FALLBACK) -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm hover:shadow-md border border-slate-100 flex flex-col justify-between transition group">
+            <div>
+                <div class="flex items-center justify-between mb-6">
+                    <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center font-bold text-xl group-hover:scale-110 transition">
+                        <i class="fa-solid fa-calendar-star"></i>
+                    </div>
+                    <span class="bg-indigo-50 text-indigo-600 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+                        Especial
+                    </span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Congreso Anual Betania 2026</h3>
+                <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                    Tres días de renovación espiritual, conferencias con invitados especiales y talleres dinámicos.
+                </p>
+            </div>
+            <div>
+                <div class="flex items-baseline gap-1 text-indigo-600 font-extrabold text-2xl mb-6">
+                    <span>$25.00</span>
+                    <span class="text-xs text-slate-400 font-medium">USD</span>
+                </div>
+                <button onclick="abrirModalInscripcion('Congreso Anual Betania 2026')" 
+                        class="w-full bg-indigo-600 text-white py-3.5 rounded-xl font-bold hover:bg-indigo-700 shadow-md shadow-indigo-600/20 transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-pen-to-square"></i> Inscribirme
+                </button>
+            </div>
+        </div>
+
+        <!-- TARJETA 2: GRATUITA (FALLBACK) -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm hover:shadow-md border border-slate-100 flex flex-col justify-between transition group">
+            <div>
+                <div class="flex items-center justify-between mb-6">
+                    <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center font-bold text-xl group-hover:scale-110 transition">
+                        <i class="fa-solid fa-hands-praying"></i>
+                    </div>
+                    <span class="bg-emerald-50 text-emerald-600 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+                        Entrada Libre
+                    </span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Retiro de Jóvenes</h3>
+                <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                    Un espacio diseñado para conectar con propósito, dinámicas de integración y compañerismo.
+                </p>
+            </div>
+            <div>
+                <div class="text-emerald-600 font-extrabold text-2xl mb-6">
+                    Gratuito
+                </div>
+                <button onclick="abrirModalInscripcion('Retiro de Jóvenes')" 
+                        class="w-full bg-slate-900 text-white py-3.5 rounded-xl font-bold hover:bg-slate-800 shadow-md transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-user-plus"></i> Participar Gratis
+                </button>
+            </div>
+        </div>
+
+        <!-- TARJETA 3: PLAN DE CRECIMIENTO / CURSO (FALLBACK) -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm hover:shadow-md border border-slate-100 flex flex-col justify-between transition group">
+            <div>
+                <div class="flex items-center justify-between mb-6">
+                    <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center font-bold text-xl group-hover:scale-110 transition">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                    </div>
+                    <span class="bg-amber-50 text-amber-600 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+                        Plan 4 Semanas
+                    </span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Escuela de Liderazgo</h3>
+                <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                    Programa intensivo de formación ministerial, oratoria y trabajo en equipo para nuevos líderes.
+                </p>
+            </div>
+            <div>
+                <div class="flex items-baseline gap-1 text-indigo-600 font-extrabold text-2xl mb-6">
+                    <span>$10.00</span>
+                    <span class="text-xs text-slate-400 font-medium">USD</span>
+                </div>
+                <button onclick="abrirModalInscripcion('Escuela de Liderazgo')" 
+                        class="w-full bg-indigo-600 text-white py-3.5 rounded-xl font-bold hover:bg-indigo-700 shadow-md shadow-indigo-600/20 transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-graduation-cap"></i> Unirme al Plan
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- SCRIPT DE EXPERIENCIA INTEGRADO -->
+<script>
+    (function() {
+        // Cargar eventos/planes dinámicos desde la base de datos si está disponible
+        async function cargarEventosDinamicos() {
+            if (typeof window.API_URL === 'undefined') return;
+
+            try {
+                const res = await fetch(`${window.API_URL}?action=obtenerDatosIniciales`);
+                const data = await res.json();
+
+                if (data.success && (data.eventos?.length > 0 || data.planes?.length > 0)) {
+                    const grid = document.getElementById('grid-experiencias');
+                    if (!grid) return;
+
+                    let htmlCards = '';
+
+                    // Renderizar Planes si existen en Google Sheets
+                    if (data.planes && data.planes.length > 0) {
+                        data.planes.forEach(plan => {
+                            const precio = parseFloat(plan.PrecioUSD) || 0;
+                            const esGratis = precio === 0;
+
+                            htmlCards += `
+                                <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm hover:shadow-md border border-slate-100 flex flex-col justify-between transition group">
+                                    <div>
+                                        <div class="flex items-center justify-between mb-6">
+                                            <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center font-bold text-xl group-hover:scale-110 transition">
+                                                <i class="fa-solid fa-layer-group"></i>
+                                            </div>
+                                            <span class="bg-indigo-50 text-indigo-600 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">Plan SaaS</span>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-slate-900 mb-2">${plan.Nombre}</h3>
+                                        <p class="text-slate-600 text-sm mb-6 leading-relaxed">${plan.Descripcion || 'Plan de crecimiento comunitario.'}</p>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-extrabold text-indigo-600 mb-6">
+                                            ${esGratis ? 'Gratuito' : `$${precio.toFixed(2)} USD`}
+                                        </div>
+                                        <button onclick="abrirModalInscripcion('${plan.Nombre}')" class="w-full bg-indigo-600 text-white py-3.5 rounded-xl font-bold hover:bg-indigo-700 transition">
+                                            ${esGratis ? 'Unirme Gratis' : 'Adquirir Plan'}
+                                        </button>
+                                    </div>
+                                </div>
+                            `;
+                        });
+                    }
+
+                    // Renderizar Eventos si existen en Google Sheets
+                    if (data.eventos && data.eventos.length > 0) {
+                        data.eventos.forEach(evt => {
+                            htmlCards += `
+                                <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm hover:shadow-md border border-slate-100 flex flex-col justify-between transition group">
+                                    <div>
+                                        <div class="flex items-center justify-between mb-6">
+                                            <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center font-bold text-xl group-hover:scale-110 transition">
+                                                <i class="fa-solid fa-calendar-check"></i>
+                                            </div>
+                                            <span class="bg-emerald-50 text-emerald-600 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">${evt.Estado || 'Activo'}</span>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-slate-900 mb-2">${evt.Titulo}</h3>
+                                        <p class="text-slate-600 text-sm mb-6 leading-relaxed"><i class="fa-solid fa-location-dot text-slate-400 mr-1"></i> ${evt.Lugar || 'Sede Principal'}</p>
+                                    </div>
+                                    <div>
+                                        <button onclick="abrirModalInscripcion('${evt.Titulo}')" class="w-full bg-slate-900 text-white py-3.5 rounded-xl font-bold hover:bg-slate-800 transition">
+                                            Inscribirme
+                                        </button>
+                                    </div>
+                                </div>
+                            `;
+                        });
+                    }
+
+                    if (htmlCards.trim() !== '') {
+                        grid.innerHTML = htmlCards;
+                    }
+                }
+            } catch (err) {
+                console.log("Usando datos locales de reserva para experiencias.");
+            }
+        }
+
+        cargarEventosDinamicos();
+    })();
+</script>
