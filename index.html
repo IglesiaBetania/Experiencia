@@ -218,16 +218,34 @@
         }
 
         async function cargarTasaBCV() {
-            try {
-                const res = await fetch(`${API_URL}?action=obtenerDatosIniciales`);
-                const data = await res.json();
-                if (data.success && data.tasaBCV) {
-                    window.tasaBCVGlobal = parseFloat(data.tasaBCV);
-                }
-            } catch (e) {
-                console.error("Error al obtener Tasa BCV:", e);
-            }
+    // 1. Cargar inmediatamente la última tasa conocida desde localStorage
+    const tasaGuardada = localStorage.getItem('betania_tasa_bcv');
+    if (tasaGuardada) {
+        window.tasaBCVGlobal = parseFloat(tasaGuardada);
+        actualizarPantallaTasa();
+    }
+
+    // 2. Consultar la tasa actualizada al backend
+    try {
+        const res = await fetch(`${API_URL}?action=obtenerDatosIniciales`);
+        const data = await res.json();
+        if (data.success && data.tasaBCV) {
+            window.tasaBCVGlobal = parseFloat(data.tasaBCV);
+            // Guardar en almacenamiento local para la próxima visita
+            localStorage.setItem('betania_tasa_bcv', window.tasaBCVGlobal);
+            actualizarPantallaTasa();
         }
+    } catch (e) {
+        console.error("Error al obtener Tasa BCV:", e);
+    }
+}
+
+function actualizarPantallaTasa() {
+    const displayBCV = document.getElementById('tasa-bcv-display');
+    if (displayBCV && window.tasaBCVGlobal) {
+        displayBCV.innerText = `${window.tasaBCVGlobal.toFixed(2)} VES`;
+    }
+}
 
         function cerrarOnboarding() {
             localStorage.setItem('betania_onboarding_seen', 'true');
